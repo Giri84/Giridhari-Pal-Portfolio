@@ -6,7 +6,7 @@ export const profile = {
   location: "Gujarat, India",
   phone: "+91-9811938053",
   email: "giri.pauldhari84@gmail.com",
-  site: "giridharipal.com",
+  site: "giridhari-pal-portfolio.vercel.app",
   linkedin: "https://www.linkedin.com/in/giridhari-pal-a7a413132/",
   github: "https://github.com/Giri84",
   summary:
