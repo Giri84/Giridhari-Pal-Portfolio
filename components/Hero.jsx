@@ -32,7 +32,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-dot-grid opacity-40 mask-fade-b pointer-events-none" />
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 grid lg:grid-cols-[1fr_280px] gap-14 items-center">
+      <div className="relative mx-auto w-full max-w-6xl px-6 grid lg:grid-cols-[1fr_480px] gap-14 items-center">
         <div>
           <div className="font-mono text-sm text-cyan mb-6 h-5">
             <span className="text-muted">$</span> {typed}

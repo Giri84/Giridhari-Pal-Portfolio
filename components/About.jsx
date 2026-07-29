@@ -28,6 +28,10 @@ export default function About() {
                 <span className="text-paper">{profile.location}</span>
               </li>
               <li className="flex justify-between">
+                <span className="text-muted">hometown</span>
+                <span className="text-paper">{profile.hometown}</span>
+              </li>
+              <li className="flex justify-between">
                 <span className="text-muted">availability</span>
                 <span className="text-ok">open to opportunities</span>
               </li>

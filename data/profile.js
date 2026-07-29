@@ -4,6 +4,7 @@ export const profile = {
   role: "Backend & Systems Engineer",
   tagline: "IoT telemetry, real-time data pipelines, and applied ML — shipped to production.",
   location: "Gujarat, India",
+  hometown: "New Delhi, India",
   phone: "+91-9811938053",
   email: "giri.pauldhari84@gmail.com",
   site: "giridhari-pal-portfolio.vercel.app",

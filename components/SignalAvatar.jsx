@@ -10,38 +10,43 @@ const BARS = [6, 14, 9, 20, 12, 26, 15, 22, 10, 18, 8, 24, 13, 19, 7];
 
 export default function SignalAvatar() {
   return (
-    <div className="relative w-full max-w-[280px] mx-auto lg:mx-0">
-      <div className="relative aspect-square rounded-2xl border border-line bg-panel overflow-hidden bg-dot-grid">
-        {/* corner ticks, like a scope readout frame — sits above everything */}
-        <span className="absolute top-3 left-3 w-3 h-3 border-t border-l border-amber/60 z-20" />
-        <span className="absolute top-3 right-3 w-3 h-3 border-t border-r border-amber/60 z-20" />
-        <span className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-amber/60 z-20" />
-        <span className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-amber/60 z-20" />
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="relative w-full max-w-[360px] sm:max-w-[420px] mx-auto lg:mx-0"
+    >
+      {/* ambient glow behind the card */}
+      <div className="absolute -inset-6 -z-10">
+        <div className="absolute top-0 right-0 w-52 h-52 bg-amber/25 rounded-full blur-[70px]" />
+        <div className="absolute bottom-0 left-0 w-52 h-52 bg-cyan/20 rounded-full blur-[70px]" />
+      </div>
+
+      <div className="relative aspect-[930/1280] rounded-2xl border border-line bg-panel2 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+        {/* top accent scan-line */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-amber to-transparent z-20" />
+
+        {/* corner ticks */}
+        <span className="absolute top-4 left-4 w-3.5 h-3.5 border-t border-l border-amber/70 z-20" />
+        <span className="absolute top-4 right-4 w-3.5 h-3.5 border-t border-r border-amber/70 z-20" />
+        <span className="absolute bottom-4 left-4 w-3.5 h-3.5 border-b border-l border-amber/70 z-20" />
+        <span className="absolute bottom-4 right-4 w-3.5 h-3.5 border-b border-r border-amber/70 z-20" />
 
         {HAS_PHOTO ? (
-          <div className="absolute inset-3 rounded-xl overflow-hidden bg-ink">
-            {/* photo, desaturated so any lighting/background/clothing color
-                doesn't fight the palette */}
+          <>
             <Image
               src="/images/avatar.jpg"
               alt="Giridhari Pal"
               fill
-              sizes="280px"
+              sizes="(min-width: 1024px) 420px, 360px"
               priority
-              className="object-cover object-top grayscale contrast-[1.1] brightness-[0.95]"
+              className="object-cover object-top"
             />
-            {/* duotone wash tying the photo into the amber/cyan palette —
-                mix-blend "color" keeps the photo's own light/shadow detail
-                and just re-tints its hue */}
-            <div
-              className="absolute inset-0 mix-blend-color bg-gradient-to-br from-amber via-amber/60 to-cyan"
-              aria-hidden="true"
-            />
-            {/* soft fade so the photo settles into the panel instead of a hard edge */}
-            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-ink/90 to-transparent" />
-          </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-ink/25" />
+          </>
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-dot-grid">
             <span className="font-display font-bold text-6xl tracking-tight text-paper select-none">
               GP
             </span>
@@ -64,17 +69,20 @@ export default function SignalAvatar() {
           </div>
         )}
 
-        <div className="absolute top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 font-mono text-[10px] tracking-widest text-ok bg-ink/70 backdrop-blur-sm px-2 py-1 rounded-full border border-line">
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 font-mono text-[10px] tracking-widest text-ok bg-ink/70 backdrop-blur-sm px-2.5 py-1 rounded-full border border-line">
           <span className="w-1.5 h-1.5 rounded-full bg-ok animate-pulse" />
           ONLINE
         </div>
-      </div>
 
-      {!HAS_PHOTO && (
-        <p className="mt-3 text-center lg:text-left font-mono text-[11px] text-muted">
-          photo slot open — drop /public/images/avatar.jpg to replace
-        </p>
-      )}
-    </div>
+        <div className="absolute bottom-0 left-0 right-0 z-20 px-4 py-3 flex items-center justify-between">
+          <span className="font-mono text-[10px] tracking-widest text-paper/90">
+            GP // BACKEND_ENG
+          </span>
+          <span className="font-mono text-[10px] tracking-widest text-cyan">
+            IND
+          </span>
+        </div>
+      </div>
+    </motion.div>
   );
 }
