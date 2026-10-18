@@ -79,7 +79,7 @@ export default function Hero() {
               <span className="absolute inset-0 rounded-full bg-ok opacity-60 animate-ping" />
               <span className="relative w-2.5 h-2.5 rounded-full bg-ok" />
             </span>
-            Open to backend / IoT / applied-ML roles
+            Open to Backend, Python &amp; DevOps roles
           </motion.div>
 
           <motion.p {...fade(0.05)} className="mt-8 text-2xl sm:text-3xl text-muted font-display">
@@ -171,7 +171,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="absolute -top-2 right-0 sm:-right-4 rounded-2xl p-4 font-mono text-[12px] leading-6 animate-float w-[210px] bg-[#0F1630]/90 backdrop-blur border border-white/10 text-slate-100 shadow-xl">
+          <div className="absolute -top-4 left-0 sm:-left-8 rounded-2xl p-4 font-mono text-[12px] leading-6 animate-float w-[210px] bg-[#0F1630]/90 backdrop-blur border border-white/10 text-slate-100 shadow-xl">
             <div className="flex gap-1.5 mb-2" aria-hidden="true">
               <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
               <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
@@ -196,7 +196,7 @@ export default function Hero() {
             <p className="text-[11px] text-muted">{years.source}</p>
           </div>
 
-          <span className="absolute top-[40%] left-0 w-11 h-11 rounded-full bg-green-500 grid place-items-center text-white animate-float-slow" aria-hidden="true">
+          <span className="absolute top-[30%] right-0 w-11 h-11 rounded-full bg-green-500 grid place-items-center text-white animate-float-slow" aria-hidden="true">
             <Zap size={20} />
           </span>
         </motion.div>

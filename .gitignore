@@ -29,3 +29,6 @@ yarn-error.log*
 
 
 ._*
+# private LinkedIn data export
+Basic_LinkedInDataExport*/
+._*

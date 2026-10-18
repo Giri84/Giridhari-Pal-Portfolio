@@ -1,0 +1,27 @@
+# Giridhari Pal — Backend & Systems Engineer
+
+> Python and Rust backend engineer in Gandhinagar, Gujarat, India with 3+ years of professional experience (since Sep 2023; earlier internship and consultancy work from Nov 2021). Builds scalable APIs, microservices, Kafka/MQTT real-time pipelines and IoT energy systems. Currently Junior Research Fellow at Dhirubhai Ambani University. Open to Backend Engineer, Python Developer, Software Engineer and DevOps roles (remote, hybrid or on-site: Kolkata, Noida, Gurugram, Delhi, Ahmedabad / Gandhinagar).
+
+## Links
+- Portfolio: https://giridhari-pal-portfolio.vercel.app
+- LinkedIn: https://www.linkedin.com/in/giridharipal/
+- GitHub: https://github.com/Giri84
+- Resume (PDF): https://giridhari-pal-portfolio.vercel.app/Giridhari_pal_Resume.pdf
+- Email: giri.pauldhari84@gmail.com
+
+## Experience
+- Junior Research Fellow, Dhirubhai Ambani University (Aug 2025 – present): Energy Management and carbon-emission tracking platform; ESP32 + MQTT + Kafka, FastAPI/gRPC/Actix-Web microservices, PostgreSQL, InfluxDB, Redis, Rust OTA firmware service, Tauri/React analytics apps.
+- Freelance Backend Engineer / Technical Consultant, NUMENTRIX (Nov 2024 – Jul 2025): ERP systems, leave management, ZWCAD-to-inventory desktop app, TensorFlow OCR for HDFC Bank.
+- DevOps & SDE Consultant Engineer, RC Labs (Sep 2023 – Oct 2024): Battery Management System backend, millions of data points daily at sub-100ms latency, Kafka, gRPC, Grafana, Docker.
+- DevOps & SDE Intern, RC Labs (Sep 2022 – Aug 2023): PyQt desktop and Django web battery-monitoring apps, encrypted MQTT.
+- Software Developer (Consultancy Project), RC Labs (Nov 2021 – Aug 2022): Grafana dashboards, Python ETL, Node-RED ingestion.
+
+## Skills
+Python, Rust, TypeScript, C, C++, FastAPI, Django, Flask, Actix-Web, Node.js, gRPC, REST, Microservices, Apache Kafka, MQTT, Node-RED, ESP32, PostgreSQL, InfluxDB, MongoDB, Redis, DuckDB, Docker, AWS (EC2, S3), DigitalOcean, Linux, Git, React, Tauri, Grafana, TensorFlow, OpenCV.
+
+## Patents and publication
+- Four-Level Biometric Security System (Indian patent application 201811033525; paper published in IJRTE, Jan 2019)
+- I-SIGN: Intelligent Sign Device (Indian patent application 201821049324)
+
+## Education
+B.E. Information Science and Engineering, Sri Krishna Institute of Technology (VTU), Bangalore, 2019–2023.

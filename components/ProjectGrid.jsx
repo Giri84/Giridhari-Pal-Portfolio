@@ -28,10 +28,9 @@ export default function ProjectGrid() {
         <SectionHeading
           code="SYS.04 // PROJECTS"
           title="Projects"
-          note={`${profile.projects.length} logged`}
         />
 
-        <Reveal className="grid lg:grid-cols-3 gap-5">
+        <Reveal className="grid md:grid-cols-2 gap-5">
           {featured.map((p) => (
             <article
               key={p.title}

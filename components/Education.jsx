@@ -8,7 +8,7 @@ export default function Education() {
   return (
     <section id="edu" className="py-24 border-t border-line bg-panel2/40">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading code="SYS.05 // EDUCATION" title="Education" />
+        <SectionHeading code="SYS.06 // EDUCATION" title="Education" />
 
         <Reveal className="flex items-start gap-5 rounded-xl glass p-6 max-w-2xl">
           <div className="shrink-0 w-11 h-11 rounded-md border border-line flex items-center justify-center text-amber">

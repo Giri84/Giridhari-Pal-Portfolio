@@ -10,6 +10,7 @@ const LINKS = [
   { id: "log", label: "Experience" },
   { id: "stack", label: "Skills" },
   { id: "work", label: "Projects" },
+  { id: "awards", label: "Achievements" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -56,13 +57,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors ${
-        scrolled || open ? "glass border-x-0 border-t-0" : ""
-      }`}
+      className="fixed top-3 inset-x-0 z-50 px-3 sm:px-4"
     >
       <nav
         aria-label="Primary"
-        className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between"
+        className={`mx-auto max-w-6xl px-4 sm:px-5 h-16 rounded-2xl glass flex items-center justify-between transition-shadow ${scrolled ? "shadow-2xl" : ""}`}
       >
         <a href="#top" className="flex items-center gap-3">
           <span className="w-10 h-10 rounded-xl bg-brand grid place-items-center font-display font-bold text-white">
@@ -74,7 +73,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden lg:flex items-center gap-8 text-sm">
+        <ul className="hidden lg:flex items-center gap-6 text-sm">
           {LINKS.map((l) => (
             <li key={l.id}>
               <a
@@ -118,7 +117,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="lg:hidden px-6 pb-5 space-y-1">
+        <ul className="lg:hidden mx-auto max-w-6xl mt-2 rounded-2xl glass px-5 py-4 space-y-1">
           {LINKS.map((l) => (
             <li key={l.id}>
               <a

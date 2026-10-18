@@ -28,6 +28,10 @@ export default function About() {
                 <span className="text-muted">location</span>
                 <span className="text-paper">{profile.location}</span>
               </li>
+              <li className="flex justify-between gap-4">
+                <span className="text-muted">languages</span>
+                <span className="text-paper text-right">{profile.languages.join(" · ")}</span>
+              </li>
               <li className="flex justify-between">
                 <span className="text-muted">hometown</span>
                 <span className="text-paper">{profile.hometown}</span>
@@ -35,6 +39,9 @@ export default function About() {
               <li className="flex justify-between">
                 <span className="text-muted">availability</span>
                 <span className="text-ok">{profile.status.availability}</span>
+              </li>
+              <li className="text-xs text-muted leading-relaxed pt-1 border-t border-line">
+                {profile.openLocations}
               </li>
             </ul>
           </div>

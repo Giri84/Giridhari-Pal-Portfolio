@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 border-t border-line">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading code="SYS.06 // CONTACT" title="Contact" />
+        <SectionHeading code="SYS.07 // CONTACT" title="Contact" />
 
         <Reveal className="rounded-xl glass overflow-hidden max-w-3xl">
           <div className="flex items-center gap-1.5 px-4 py-3 border-b border-line bg-panel2">
@@ -55,7 +55,7 @@ export default function Contact() {
             <p className="text-ok mt-6">
               <span className="text-cyan">$</span> status --check
               <br />
-              <span className="text-muted">→ open to backend / IoT / applied-ML roles</span>
+              <span className="text-muted">→ open to {profile.openTo}</span>
             </p>
           </div>
         </Reveal>

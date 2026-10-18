@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { profile } from "@/data/profile";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
@@ -52,7 +53,8 @@ function Job({ job }) {
 
         <h3 className="font-display font-semibold text-xl text-paper">{job.role}</h3>
         <p className="font-mono text-sm text-muted mb-3">
-          {job.org} · {job.location}
+          {job.org}
+          {job.type ? ` · ${job.type}` : ""} · {job.location}
         </p>
         <p className="text-[15px] text-paper/90 mb-4">{job.summary}</p>
 
@@ -82,6 +84,51 @@ function Job({ job }) {
           </button>
         )}
 
+        {job.media?.length > 0 && (
+          <div className="mt-6">
+            <p className="font-mono text-[11px] tracking-[0.2em] text-muted mb-3">
+              MEDIA &amp; COVERAGE
+            </p>
+            <ul className={`grid gap-4 ${job.media.length > 1 ? "sm:grid-cols-2" : "max-w-xl"}`}>
+              {job.media.map((m) => (
+                <li key={m.href}>
+                  <a
+                    href={m.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl glass transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <div className="relative aspect-[16/9] overflow-hidden bg-panel2">
+                      <Image
+                        src={m.image}
+                        alt={m.title}
+                        fill
+                        sizes="(min-width: 1024px) 420px, (min-width: 640px) 45vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute left-3 top-3 rounded-full bg-black/60 backdrop-blur-md border border-white/20 px-2.5 py-1 font-mono text-[10px] tracking-wider text-white">
+                        {m.source}
+                      </span>
+                      <span className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white opacity-0 transition-opacity group-hover:opacity-100">
+                        <ArrowUpRight size={16} />
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-4">
+                      <p className="font-mono text-[11px] tracking-widest text-cyan">{m.date}</p>
+                      <h4 className="mt-1 font-display font-semibold leading-snug text-paper transition-colors group-hover:text-amber">
+                        {m.title}
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-muted line-clamp-3">
+                        {m.description}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <div className="mt-5 flex flex-wrap gap-2">
           {job.stack.map((tech) => (
             <span
@@ -104,7 +151,6 @@ export default function ExperienceLog() {
         <SectionHeading
           code="SYS.02 // EXPERIENCE"
           title="Experience"
-          note="reverse chronological"
         />
 
         <div className="relative">
