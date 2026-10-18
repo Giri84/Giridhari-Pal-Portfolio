@@ -1,20 +1,21 @@
 import { profile } from "@/data/profile";
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 
 export default function StackPanel() {
   return (
-    <section id="stack" className="py-24 border-t border-line">
+    <section id="stack" className="py-24 border-t border-line bg-panel2/40">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading code="SYS.03 // STACK" title="Modules loaded" />
+        <SectionHeading code="SYS.03 // STACK" title="Skills" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Reveal className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {profile.skillGroups.map((group) => (
             <div
               key={group.code}
-              className="rounded-lg border border-line bg-panel p-5 hover:border-cyan/50 transition-colors"
+              className="rounded-xl glass p-5 hover:border-cyan/50 transition-colors"
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="font-mono text-[10px] tracking-widest text-cyan">
+                <span className="font-mono text-[11px] tracking-widest text-cyan">
                   {group.code}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-ok" />
@@ -34,7 +35,7 @@ export default function StackPanel() {
               </ul>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

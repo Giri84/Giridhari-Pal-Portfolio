@@ -1,15 +1,16 @@
 import { profile } from "@/data/profile";
 import SectionHeading from "./SectionHeading";
+import Reveal from "./Reveal";
 import { GraduationCap } from "lucide-react";
 
 export default function Education() {
   const e = profile.education;
   return (
-    <section id="edu" className="py-24 border-t border-line">
+    <section id="edu" className="py-24 border-t border-line bg-panel2/40">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading code="SYS.05 // EDUCATION" title="Base image" />
+        <SectionHeading code="SYS.05 // EDUCATION" title="Education" />
 
-        <div className="flex items-start gap-5 rounded-lg border border-line bg-panel p-6 max-w-2xl">
+        <Reveal className="flex items-start gap-5 rounded-xl glass p-6 max-w-2xl">
           <div className="shrink-0 w-11 h-11 rounded-md border border-line flex items-center justify-center text-amber">
             <GraduationCap size={22} />
           </div>
@@ -25,7 +26,7 @@ export default function Education() {
               {e.detail} · {e.location}
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
-import SignalRail from "@/components/SignalRail";
-import MobileNav from "@/components/MobileNav";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import ExperienceLog from "@/components/ExperienceLog";
@@ -12,9 +11,8 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <SignalRail />
-      <MobileNav />
-      <main className="lg:pl-16">
+      <Navbar />
+      <main id="main">
         <Hero />
         <About />
         <ExperienceLog />

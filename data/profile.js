@@ -8,15 +8,22 @@ export const profile = {
   phone: "+91-9811938053",
   email: "giri.pauldhari84@gmail.com",
   site: "giridhari-pal-portfolio.vercel.app",
-  linkedin: "https://www.linkedin.com/in/giridhari-pal-a7a413132/",
+  linkedin: "https://www.linkedin.com/in/giridharipal/",
   github: "https://github.com/Giri84",
+  repo: "https://github.com/Giri84/Giridhari-Pal-Portfolio",
   summary:
     "I build backend systems that stay up: microservices, event-driven pipelines, and APIs that move telemetry from physical hardware into something a team can actually act on. Three-plus years across IoT platforms, ERP systems, and applied ML — usually the person wiring the sensor, the stream, and the database together.",
+  currentFocus: "Building an IoT Energy Management System at Dhirubhai Ambani University",
+  status: {
+    role: "Jr. Research Fellow",
+    focus: "IoT + Real-time data",
+    availability: "open to opportunities",
+  },
   stats: [
-    { label: "YEARS SHIPPING", value: "3+" },
-    { label: "DATA POINTS / DAY", value: "1M+" },
-    { label: "P99 LATENCY", value: "<100ms" },
-    { label: "PRODUCTION SERVICES", value: "12+" },
+    { label: "YEARS SHIPPING", value: "3+", source: "Since 2021" },
+    { label: "DATA POINTS / DAY", value: "1M+", source: "RC Labs, 2021–24" },
+    { label: "LATENCY", value: "<100ms", source: "MQTT/Kafka pipeline" },
+    { label: "PRODUCTION SERVICES", value: "12+", source: "Across all roles" },
   ],
   skillGroups: [
     {
@@ -69,11 +76,12 @@ export const profile = {
       start: "2025-08",
       end: "PRESENT",
       status: "active",
+      summary: "Owning the backend for an IoT Energy Management System, from ESP32 devices to dashboards.",
       points: [
-        "Own end-to-end backend architecture for an Energy Management System integrating ESP32 IoT devices with backend services for reliable, continuous telemetry ingestion.",
+        "Own end-to-end backend architecture for an **Energy Management System** integrating ESP32 IoT devices with backend services for reliable, continuous telemetry ingestion.",
         "Deploy containerized microservices — Docker, FastAPI, gRPC, Actix-Web — across PostgreSQL, InfluxDB, and Redis for scalable, fault-tolerant processing.",
-        "Architect real-time MQTT/Kafka pipelines for high-throughput telemetry with minimal latency.",
-        "Built a secure Actix-Web OTA service for firmware versioning and controlled device rollout.",
+        "Architect real-time **MQTT/Kafka pipelines** for high-throughput telemetry with minimal latency.",
+        "Built a secure **Actix-Web OTA service** for firmware versioning and controlled device rollout.",
       ],
       stack: ["FastAPI", "Actix-Web", "Kafka", "MQTT", "PostgreSQL", "Docker"],
     },
@@ -85,11 +93,12 @@ export const profile = {
       start: "2024-10",
       end: "2025-08",
       status: "done",
+      summary: "Independent backend work: ERP systems, CAD integration, embedded control and OCR.",
       points: [
         "Architected custom ERP and Leave Management systems using FastAPI, PostgreSQL, and React, deployed via Docker on cloud infrastructure.",
         "Integrated ZWCAD with FastAPI backends via VBA and Tauri to automate design-to-inventory workflows for manufacturing clients.",
         "Programmed ESP32 controllers for solar tracking — sensor fusion and stable motor control.",
-        "Built an OCR engine with OpenCV for banking document automation, cutting manual data entry errors.",
+        "Built an **OCR engine** with OpenCV for banking document automation, cutting manual data entry errors.",
       ],
       stack: ["FastAPI", "React", "Tauri", "OpenCV", "PostgreSQL"],
     },
@@ -101,9 +110,10 @@ export const profile = {
       start: "2021-11",
       end: "2024-10",
       status: "done",
+      summary: "Backend and data platform for a battery management system, handling millions of data points daily.",
       points: [
         "Owned the backend and data-visualization platform integrating IoT telemetry across desktop, web, and cloud.",
-        "Architected MQTT/Kafka pipelines processing millions of data points daily at sub-100ms latency, backed by gRPC, PostgreSQL, and Grafana.",
+        "Architected MQTT/Kafka pipelines processing **millions of data points daily** at **sub-100ms latency**, backed by gRPC, PostgreSQL, and Grafana.",
         "Built custom encryption, multithreading, and multiprocessing into the service layer for throughput and fault tolerance.",
         "Standardized deployments with Docker and centralized dashboards for remote monitoring.",
       ],
@@ -114,6 +124,8 @@ export const profile = {
     {
       title: "ERP & Leave Management Systems",
       status: "shipped",
+      featured: true,
+      outcome: "Production ERP for manufacturing clients, with role-based access and automated email workflows.",
       stack: ["FastAPI", "PostgreSQL", "React", "Docker"],
       description:
         "Production ERP platforms for manufacturing clients plus a role-based Leave Management System with automated email workflows.",
@@ -128,6 +140,8 @@ export const profile = {
     {
       title: "OCR Document Engine — HDFC Bank",
       status: "shipped",
+      featured: true,
+      outcome: "Cut manual data entry errors and processing time for banking documents.",
       stack: ["TensorFlow", "OpenCV", "Python"],
       description:
         "Customized OCR pipeline for banking document automation — reduced manual entry errors and processing time.",
@@ -135,6 +149,8 @@ export const profile = {
     {
       title: "Energy Management System",
       status: "active",
+      featured: true,
+      outcome: "Continuous telemetry ingestion from ESP32 devices with secure OTA firmware rollout.",
       stack: ["ESP32", "MQTT", "Kafka", "Actix-Web"],
       description:
         "IoT telemetry platform with a secure OTA firmware pipeline, built for continuous, distributed hardware ingestion.",

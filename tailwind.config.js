@@ -8,23 +8,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#0A0E12",
-        panel: "#121821",
-        panel2: "#0E1319",
-        line: "#212B34",
-        line2: "#2A3540",
-        paper: "#ECE7DD",
-        muted: "#8B94A1",
+        ink: "rgb(var(--c-ink) / <alpha-value>)",
+        panel: "rgb(var(--c-panel) / <alpha-value>)",
+        panel2: "rgb(var(--c-panel2) / <alpha-value>)",
+        line: "rgb(var(--c-line) / <alpha-value>)",
+        line2: "rgb(var(--c-line2) / <alpha-value>)",
+        paper: "rgb(var(--c-paper) / <alpha-value>)",
+        muted: "rgb(var(--c-muted) / <alpha-value>)",
         amber: {
-          DEFAULT: "#FFB454",
-          dim: "#B8863E",
-          glow: "#FFD8A0",
+          DEFAULT: "rgb(var(--c-accent) / <alpha-value>)",
+          dim: "rgb(var(--c-accent-dim) / <alpha-value>)",
+          glow: "rgb(var(--c-accent-glow) / <alpha-value>)",
         },
         cyan: {
-          DEFAULT: "#5CC9E8",
-          dim: "#3E8FA6",
+          DEFAULT: "rgb(var(--c-blue) / <alpha-value>)",
+          dim: "rgb(var(--c-blue-dim) / <alpha-value>)",
         },
-        ok: "#7CD992",
+        ok: "rgb(var(--c-ok) / <alpha-value>)",
       },
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],
@@ -39,6 +39,10 @@ module.exports = {
           "0%, 49%": { opacity: "1" },
           "50%, 100%": { opacity: "0" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
         drift: {
           "0%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-6px)" },
@@ -48,6 +52,8 @@ module.exports = {
       animation: {
         blink: "blink 1s step-start infinite",
         drift: "drift 6s ease-in-out infinite",
+        float: "float 7s ease-in-out infinite",
+        "float-slow": "float 9s ease-in-out infinite reverse",
       },
     },
   },
